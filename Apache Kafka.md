@@ -41,3 +41,22 @@ A messaging system is responsible for transferring data from one application to 
 # Producer
 1. Producers are applications which write/publish data to the topics within a cluster using the Producting APIs.
 2. Producers can write data either on the topic level (All the partitions of that topic) or specific partitions of the topic.
+
+# Consumer
+1. Consumers are applications which read/consume data from the topics within a cluster using the Consuming APIs.
+2. Consumers can read data either on the topic level (All the partitions of that topic) or specific partitions of the topic.
+3. Consumers are always associated with exactly one Cunsumer Group.
+4. A Consumer Group is a group of related consumers that perform a task.
+
+# Broker
+1. Broker are simple software processes who maintain and manage the published messages and also known as Kafka servers.
+2. Brokers also manage the consumer-offsets and are responsible for the delivery of messages to the right consumers.
+3. A set of brokers who are communicating with each other to perform the management and maintenance task are collectively known as Kafka Cluster.
+4. We can add more brokers in a already running Kafka Cluster without any downtime.
+
+# Zookeeper
+1. Zookeeper is used to monitor Kafka Cluster and co-ordinate with each broker. It keeps all the metadata information related to kafka cluster in the forms of key-value pair. Metadata includes:
+a. Configuration information
+b. Health status of each broker
+2. It is used for controller election within Kafka Cluster.
+3. A set of Zookeeper nodes wotrking together to manage other distributed systems is knowns as Zookeeeper Cluster or Zookeeper Ensemble.
